@@ -1,10 +1,14 @@
+import Header from "./components/Header/Header";
+import MainContent from "./components/MainPage/MainContent/MainContent";
+
 import "./App.css";
 
 function App() {
   return (
-    <>
-      <p></p>
-    </>
+    <main className="main_app">
+      <Header />
+      <MainContent />
+    </main>
   );
 }
 

@@ -1,0 +1,32 @@
+{
+  "sections": [
+    {
+      "id": "chapter1",
+      "title": "Глава 1. Первобытные века",
+      "date": "2000 г. до н.э.",
+      "paragraphs": [
+        {
+          "title": "Глава 1. Первобытные века",
+          "text": "Lorem ipsum dolor sit amet...",
+          "images": [
+            {
+              "url": "/images/ancient1.jpg",
+              "caption": "Изображение 1."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chapter2",
+      "title": "Глава 2. Каменный век",
+      "date": "1500–1000 гг. до н.э.",
+      "paragraphs": [
+        {
+          "title": "Каменный век",
+          "text": "Другой текст ..."
+        }
+      ]
+    }
+  ]
+}

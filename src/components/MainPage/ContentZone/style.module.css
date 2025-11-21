@@ -1,0 +1,7 @@
+.content {
+  flex: 1;
+  padding: 36px 69px;
+  background: var(--milky-white);
+  border-radius: 20px;
+  overflow-y: auto;
+}
