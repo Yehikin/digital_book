@@ -6,8 +6,6 @@
   display: flex;
 
   margin: 16px 20px;
-
-  border: 1px solid #db0e0e;
 }
 
 .chap_list {
@@ -17,10 +15,11 @@
 }
 
 .chap_element {
-
   width: 258px;
+  max-width: 258px;
 
   padding: 10px;
+  margin: 10px 0;
 
   background: #F7F0E6;
   border-radius: 20px 0px 0px 20px;

@@ -1,13 +1,32 @@
+import { useState } from "react";
+import type { Book, Section } from "../../../data/types";
 import ContentZone from "../ContentZone/ContentZone";
+
 import style from "./style.module.css";
 
-export default function MainContent() {
+interface MainContentProps {
+  book: Book;
+}
+
+export default function MainContent({ book }: MainContentProps) {
+  const [selectedSection, setSelectedSection] = useState<Section | null>(
+    book.sections[0]
+  );
+
   return (
     <div className={style.main_block}>
       <ul className={style.chap_list}>
-        <li className={style.chap_element}>Глава 1. Первобытные в...</li>
+        {book.sections.map((section) => (
+          <li
+            key={section.id}
+            className={style.chap_element}
+            onClick={() => setSelectedSection(section)}
+          >
+            {section.title}
+          </li>
+        ))}
       </ul>
-      <ContentZone />
+      <ContentZone section={selectedSection} />
     </div>
   );
 }
