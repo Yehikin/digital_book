@@ -19,7 +19,9 @@ export default function MainContent({ book }: MainContentProps) {
         {book.sections.map((section) => (
           <li
             key={section.id}
-            className={style.chap_element}
+            className={`${style.chap_element} ${
+              selectedSection?.id === section.id ? style.active : ""
+            }`}
             onClick={() => setSelectedSection(section)}
           >
             {section.title}
