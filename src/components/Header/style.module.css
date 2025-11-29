@@ -5,6 +5,14 @@
   background: #F7F0E6;
 
   padding: 1.1rem 2rem;
+
+  /* фон справа, по центру */
+  background-image: url("/icons/bird_icon_nobg.svg");
+  background-repeat: no-repeat;
+  background-position: right 2rem top;
+  /* смещение справа */
+  background-size: 80px auto;
+  /* размер иконки */
 }
 
 .home_btn {

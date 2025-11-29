@@ -1,7 +1,5 @@
-import type { Section } from "../../../data/types";
-
+import type { Section, Paragraph } from "../../../data/types";
 import style from "./style.module.css";
-
 import Slider from "../Slider/Slider";
 
 interface ContentZoneProps {
@@ -9,20 +7,26 @@ interface ContentZoneProps {
 }
 
 export default function ContentZone({ section }: ContentZoneProps) {
-  if (!section) return <div className={style.content}>Выберите раздел</div>;
-
-  const firstParagraph = section.paragraphs[0];
-  const images = firstParagraph.images ?? [];
+  if (!section) {
+    return <div className={style.content}>Выберите раздел</div>;
+  }
 
   return (
     <div className={style.content}>
       <div className={style.timeline}></div>
 
-      <div className={style.theme}>{firstParagraph.title}</div>
+      <h2 className={style.sectionTitle}>{section.title}</h2>
 
-      <p className={style.main_text}>{firstParagraph.text}</p>
-
-      <Slider images={images} />
+      {section.paragraphs.map((para: Paragraph, index) => {
+        const images = para.images ?? [];
+        return (
+          <div key={para.title + index} className={style.paragraphBlock}>
+            <h3 className={style.paragraphTitle}>{para.title}</h3>
+            <p className={style.main_text}>{para.text}</p>
+            {images.length > 0 && <Slider images={images} />}
+          </div>
+        );
+      })}
     </div>
   );
 }

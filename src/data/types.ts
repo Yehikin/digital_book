@@ -1,5 +1,10 @@
-export interface Book {
-  sections: Section[];
+export interface Paragraph {
+  title: string;
+  text: string;
+  images?: {
+    url: string;
+    caption: string;
+  }[];
 }
 
 export interface Section {
@@ -9,11 +14,6 @@ export interface Section {
   paragraphs: Paragraph[];
 }
 
-export interface Paragraph {
-  title: string;
-  text: string;
-  images?: {
-    url: string;
-    caption: string;
-  }[];
+export interface Book {
+  sections: Section[];
 }
