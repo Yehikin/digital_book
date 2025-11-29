@@ -14,10 +14,10 @@ export default function Slider({ images }: SliderProps) {
   return (
     <Swiper
       className={style.slider}
-      loop={images.length > 2}
+      loop={images.length > 3}
       slidesPerView="auto"
       spaceBetween={20}
-      navigation
+      navigation={images.length > 3}
       modules={[Navigation]}
     >
       {images.map((img, i) => (
