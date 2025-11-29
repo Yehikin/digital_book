@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
-const repoName = "/digital_book";
+const repoName = "/digital_book/";
 
 export default defineConfig({
   plugins: [react()],
